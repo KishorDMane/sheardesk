@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <img style="width: 90%; height: 90%; margin-top: 2%; margin-left: 5%" />
+  </body>
 </html>
+<script
+  src="https://cdn.socket.io/4.5.4/socket.io.min.js"
+  integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI"
+  crossorigin="anonymous"
+></script>
+<script>
+  window.onload = () => {
+    const room = prompt("Please enter room ID : ");
+    if (room.trim().length == 0) {
+      document.write("<h1> Room ID is mandatory to join </h1>");
+      return;
+    }
+    const socket = io();
+    // socket.emit("hi","hello from kishor")
+    socket.emit("join-member", room);
+    socket.emit("sheared-screen", (data) => {
+      $("img").attr("src", "data:image/png;base64," + data);
+    });
+  };
+</script>
