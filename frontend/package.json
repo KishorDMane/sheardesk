@@ -1,0 +1,22 @@
+{
+  "name": "screen-shear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package-win":"electron-packager . snapscreen --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"snapdesk\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "screenshot-desktop": "^1.12.7",
+    "socket.io-client": "^4.5.4",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "electron": "^22.0.3",
+    "electron-packager": "^17.1.1"
+  }
+}

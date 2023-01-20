@@ -1,0 +1,32 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+#name {
+  width: 100%;
+  background-color: rgb(24, 80, 136);
+  text-align: center;
+}
+
+#code {
+  width: 100%;
+  /* background-color: blue; */
+  text-align: center;
+  font-size: 35px;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  color: white;
+}
+#start-capture {
+  background-color: rgb(63, 173, 63);
+}
+#stop-capture {
+  background-color: rgb(190, 66, 66);
+  display: none;
+}
+
