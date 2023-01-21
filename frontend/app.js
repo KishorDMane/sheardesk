@@ -41,9 +41,12 @@ app.on('activate', () => {
 
 ipcMain.on('start-capture', (event,arg) => {
     // console.log("it is working")
-    var uuid = uuidv4();
+    const uuid = uuidv4();
     socket.emit("join-message", uuid);
+
     event.reply("uuid", uuid);
+
+
  interval = setInterval(function() {
   screenshot().then((img) => {
       var imgStr = img.toString('base64')
@@ -51,9 +54,10 @@ ipcMain.on('start-capture', (event,arg) => {
       var obj = {};
       obj.room = uuid;
       obj.image = imgStr;
+
       socket.emit("screen-data", JSON.stringify(obj));
   })
-}, 1000)
+}, 100)
 })
 
 ipcMain.on('stop-capture', (event) => {

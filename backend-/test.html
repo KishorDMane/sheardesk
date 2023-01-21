@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image1" style="width: 90%; height: 90%; margin-top: 2%; margin-left: 5%" />
+</body>
+</html>
+<script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+<script>
+
+window.onload=()=>{
+    const room = prompt("Please enter room ID : ");
+    if (room.trim().length == 0) {
+      document.write("<h1> Room ID is mandatory to join </h1>");
+      return;
+    }
+    const socket=io.connect("http://localhost:8000",{transports:["websocket"]});
+    socket.emit("join-message", room);
+
+    socket.on("kishor",(data)=>{
+        console.log(data)
+        let img= document.getElementById('image1')
+     img.src =`data:image/png;base64,${data}`;
+    })
+}
+
+
+</script>

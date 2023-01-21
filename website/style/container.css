@@ -1,0 +1,21 @@
+#container{
+    width: 98%;
+    display: flex;
+}
+#container>div{
+    width: 45%;
+    margin: auto;
+}
+#container1{
+    width: 100%;
+    display: grid;
+}
+#container2{
+    width: 100%;
+}
+#container2>button{
+    margin-top: 30px;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}

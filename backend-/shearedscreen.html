@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <img style="width: 90%; height: 90%; margin-top: 2%; margin-left: 5%" />
+    <img id="image1" style="width: 90%; height: 90%; margin-top: 2%; margin-left: 5%" />
   </body>
 </html>
 <script
@@ -24,9 +24,16 @@
     }
     const socket = io();
     // socket.emit("hi","hello from kishor")
-    socket.emit("join-member", room);
+    socket.emit("join-message", room);
+
+
     socket.emit("sheared-screen", (data) => {
-      $("img").attr("src", "data:image/png;base64," + data);
+      // $("img").attr("src", "data:image/png;base64," + data);
+      console.log("hi")
+     let img= document.getElementById('image1')
+     img.src =`data:image/png;base64,${data}`;
+
+
     });
-  };
+  }; 
 </script>
