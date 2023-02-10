@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const io = require('socket.io-client')
 const { v4: uuidv4 } = require('uuid');
 const screenshot = require('screenshot-desktop');
-const socket = io('http://localhost:8000')
+const socket = io('https://screen-shear-app.onrender.com')
 
 let win
 
@@ -43,10 +43,7 @@ ipcMain.on('start-capture', (event,arg) => {
     // console.log("it is working")
     const uuid = uuidv4();
     socket.emit("join-message", uuid);
-
     event.reply("uuid", uuid);
-
-
  interval = setInterval(function() {
   screenshot().then((img) => {
       var imgStr = img.toString('base64')
