@@ -1,7 +1,7 @@
 
 <b>Project Name</b> - SnapDesk<br>
 <b>Deployed Link-</b> <br>
-This is a team project where we cloned most of the pages of the Lifestyle.com website. Lifestyle.com is an e-commerce website from where one can buy clothing and beauty-related products.
+This is a project where where user can shear thear screen.
 
 
 <h1 align ="center">App</h1>
