@@ -1,7 +1,10 @@
 
 <b>Project Name</b> - SnapDesk<br>
 <b>Deployed Link-</b> <br>
-This is a project where where user can shear thear screen.
+
+This is a project where user can shear their screen.
+
+user needs to download desktop app from the website and install it.
 
 
 <h1 align ="center">App</h1>
