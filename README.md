@@ -1,6 +1,6 @@
 
 <b>Project Name</b> - SnapDesk<br>
-<b>Deployed Link-</b> https://snazzy-biscochitos-399227.netlify.app<br>
+<b>Deployed Link-</b>https://loquacious-travesseiro-3cf53d.netlify.app<br>
 
 This is a project where user can shear their screen.
 
