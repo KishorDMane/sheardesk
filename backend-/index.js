@@ -2,9 +2,17 @@ const { Socket } = require("dgram");
 const {Server}=require("socket.io");
 const express=require("express");
 const http=require("http")
+const cors=require("cors")
+const {connection}=require("./config/db")
+const {SignupRouter}=require("./router/signup.router")
+const {LoginRouter}=require("./router/login.router")
+const {UserInfoRouter}=require("./router/getuser.router")
+
 const app=express();
 const serverHttp=http.createServer(app)
 const io=new Server(serverHttp) 
+app.use(express.json())
+app.use(cors())
 
 app.get("/shearedscreen",(req,res)=>{
     res.sendFile(__dirname+`/test.html`)
@@ -12,6 +20,13 @@ app.get("/shearedscreen",(req,res)=>{
 app.get("/",(req,res)=>{
     res.send("hello")
 })
+
+app.use("/signup",SignupRouter)
+app.use("/login",LoginRouter)
+app.use("/getuserinfo",UserInfoRouter)
+
+
+
 io.on("connection",(socket)=>{
     // socket.emit("Kishor","hi Kishor")
     socket.on("join-message",(ID)=>{ 
@@ -29,6 +44,8 @@ io.on("connection",(socket)=>{
     })
    
 })
-serverHttp.listen(8000,()=>{
+serverHttp.listen(8000,async()=>{
+    await connection
     console.log("listening on 8000 port");
 })
+

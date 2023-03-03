@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Sign Up</h1>
+		<form id="signup-form" onsubmit="return validateForm()">
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" required>
+			<label for="reenter-password">Reenter-password</label>
+			<input type="password" id="reenter-password" name="reenter-password" required>
+
+			<label for=""><a href="./login.html">login</a></label>
+			<input type="submit" value="Sign Up">
+		</form>
+	</div>
+</body>
+</html>
+<script src="./script/signu.js"></script>
