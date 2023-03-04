@@ -7,6 +7,7 @@ const {connection}=require("./config/db")
 const {SignupRouter}=require("./router/signup.router")
 const {LoginRouter}=require("./router/login.router")
 const {UserInfoRouter}=require("./router/getuser.router")
+const {LogoutRouter}=require("./router/logout.router")
 
 const app=express();
 const serverHttp=http.createServer(app)
@@ -24,6 +25,7 @@ app.get("/",(req,res)=>{
 app.use("/signup",SignupRouter)
 app.use("/login",LoginRouter)
 app.use("/getuserinfo",UserInfoRouter)
+app.use("/logout",LogoutRouter)
 
 
 

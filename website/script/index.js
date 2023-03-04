@@ -3,7 +3,22 @@
 let ul=document.getElementById("login-signup")
 
 async function logout(){
+  let token = localStorage.getItem("token");
   localStorage.removeItem('token')
+  let req=await fetch('http://localhost:8000/logout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+      
+    },
+    
+  })
+  let data=await req.json()
+  console.log(data)
+
+
+
   location.reload()
 }
 
