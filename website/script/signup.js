@@ -48,7 +48,7 @@ form.addEventListener('submit', function(event) {
   };
 
   // make a fetch request to the server
-  fetch('http://localhost:8000/signup', {
+  fetch('https://screen-shear-app.onrender.com/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ form.addEventListener('submit', function(event) {
     //   window.location.href = '/dashboard';
     } else {
       throw new Error('Signup failed.');
-      console.log(re)
+      console.log(response)
     }
   })
   .catch(error => {

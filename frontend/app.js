@@ -39,9 +39,9 @@ app.on('activate', () => {
   }
 })
 
+const uuid = uuidv4();
 ipcMain.on('start-capture', (event,arg) => {
     // console.log("it is working")
-    const uuid = uuidv4();
     socket.emit("join-message", uuid);
     event.reply("uuid", uuid);
  interval = setInterval(function() {

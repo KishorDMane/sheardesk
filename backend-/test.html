@@ -19,15 +19,13 @@ window.onload=()=>{
       document.write("<h1> Room ID is mandatory to join </h1>");
       return;
     }
-    const socket=io.connect("http://localhost:8000",{transports:["websocket"]});
+    const socket=io.connect("https://screen-shear-app.onrender.com",{transports:["websocket"]});
     socket.emit("join-message", room);
 
     socket.on("kishor",(data)=>{
-        console.log(data)
+       
         let img= document.getElementById('image1')
      img.src =`data:image/png;base64,${data}`;
     })
 }
-
-
 </script>

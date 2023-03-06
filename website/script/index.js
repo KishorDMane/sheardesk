@@ -1,52 +1,54 @@
+let ul = document.getElementById("login-signup");
 
-
-let ul=document.getElementById("login-signup")
-
-async function logout(){
+async function logout() {
   let token = localStorage.getItem("token");
-  localStorage.removeItem('token')
-  let req=await fetch('http://localhost:8000/logout', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`
-      
-    },
-    
-  })
-  let data=await req.json()
-  console.log(data)
-
-
-
-  location.reload()
-}
-
-async function  user(){
-let token = localStorage.getItem("token");
-let req = await fetch(`http://localhost:8000/getuserinfo`, {
-  headers: {
-    'Authorization': `Bearer ${token}`
+  localStorage.removeItem('token');
+  try {
+    let req = await fetch('https://screen-shear-app.onrender.com/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+    });
+    if (req.ok) {
+      let data = await req.json();
+      location.reload();
+    } else {
+      throw new Error('Logout request failed');
+    }
+  } catch (error) {
+    console.error(error);
   }
-});
-
-if (req.ok) {
-  let data = await req.json();
-  console.log(data);
-
-  ul.innerHTML=null
-  let userinfo=document.getElementById("userinfo")
-  
-  ul.innerHTML=`<li><a class="active" >${data.name}</a></li>
-  <li onclick="logout()">Logout</li>
-  `
-
-} else {
-  console.error('Server returned an error:', req.status);
+  location.reload();
 }
 
+async function user() {
+  let token = localStorage.getItem("token");
+  try {
+    let req = await fetch(`https://screen-shear-app.onrender.com/getuserinfo`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    if (req.ok) {
+      let data = await req.json();
+      console.log(data);
+
+      ul.innerHTML = null;
+      let userinfo = document.getElementById("userinfo");
+
+      ul.innerHTML = `<li><a class="active">${data.name}</a></li>
+      <li onclick="logout()" style="cursor:pointer;">Logout</li>
+      `;
+    } else {
+      throw new Error('Get user info request failed');
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 window.onload = function() {
-  user()
-}
+  user();
+};
