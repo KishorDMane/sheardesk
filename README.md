@@ -13,7 +13,6 @@ Feactures implimented in Backend:-
 3) Logout function with redis 
 4) routs for signup, login, see-sheared screen , logout 
 5) socket.io connection to shear live screen
-6) 
 
 
 
