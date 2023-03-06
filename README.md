@@ -43,8 +43,10 @@ This is a project where user can shear screen.
 8) You are abel to see sheared screen
 
 
+![snapdesk main](https://user-images.githubusercontent.com/112633247/223093344-be21d620-b94b-47d7-9963-2469f7baa7ac.png)
+
 <h1 align ="center">App</h1>
-![snapdesk_main](https://user-images.githubusercontent.com/112633247/223093344-be21d620-b94b-47d7-9963-2469f7baa7ac.png)
+
 
 ![app](https://user-images.githubusercontent.com/112633247/218098466-44cceb57-acda-4321-8555-db2345d285fc.png)
 
