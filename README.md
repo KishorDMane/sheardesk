@@ -1,7 +1,7 @@
 
 <b>Project Name</b> - SnapDesk<br>
-<b>Deployed Link for frontend-</b>https://loquacious-travesseiro-3cf53d.netlify.app<br>
-<b>Deployed Link for backend-</b>https://loquacious-travesseiro-3cf53d.netlify.app<br>
+<b>Deployed Link for frontend-</b>https://frolicking-babka-2c92c7.netlify.app/<br>
+<b>Deployed Link for backend-</b>https://screen-shear-app.onrender.com<br>
 Feactures implimented in Backend:-
 
 1) Authentication and Authorization
