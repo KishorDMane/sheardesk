@@ -27,7 +27,7 @@ loginForm.addEventListener('submit', (event) => {
   const password = document.getElementById('password').value;
 
   // Make a POST request to the login API endpoint
-  fetch('http://localhost:8000/login', {
+  fetch('https://screen-shear-app.onrender.com/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

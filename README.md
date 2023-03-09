@@ -1,54 +1,18 @@
 
 <b>Project Name</b> - SnapDesk<br>
-<b>Deployed Link for frontend-</b>https://courageous-muffin-85426c.netlify.app/<br>
-<b>Deployed Link for backend-</b>https://screen-shear-app.onrender.com<br>
-<b>Demo video-</b>https://drive.google.com/file/d/1KPyKCePl4qCUd6Eoy2cAjF6pKXUyCJom/view?usp=share_link<br>
+<b>Deployed Link-</b>https://loquacious-travesseiro-3cf53d.netlify.app<br>
+
+This is a project where user can shear their screen.
+To use this app .
+1) Go to the website and downloade and install app .
+2) start the app .
+3) To see sheared screen got to the website and go to sheared screen .
+4) hear youser need to enter the string present on app .
+5) we have succesfully sheared screen.
 
 
-
-Feactures implimented in Backend:-
-
-1) Authentication and Authorization
-2) Password hashing While stored in Database;
-3) Logout function with redis 
-4) routs for signup, login, see-sheared screen , logout 
-5) socket.io connection to shear live screen
-
-
-
-Feactures implimented in frontend:-
-1) Signup And login 
-2) instruction page 
-3) page to see sheared screen 
-4) page to downloade aplication 
-
-
-
-
-This is a project where user can shear screen.
-1) To use my app, you need to create an account. Click on the 'Sign up' button and create your account.
-
-2) Login to your account.
-
-3) Downloade the packege for windowse and Start the app
-
-4) Click on start Capture buttone here you will get one room id copy the room id
-
-5) Naw go to the View Sheared Screen window and
-
-6) Press the buttone "View Sheared Screen"
-
-7) Here You need the room id to join enter the roomID
-
-8) You are abel to see sheared screen
-
-
-<h1 align ="center">main page</h1>
-
-![snapdesk main](https://user-images.githubusercontent.com/112633247/223093344-be21d620-b94b-47d7-9963-2469f7baa7ac.png)
 
 <h1 align ="center">App</h1>
-
 
 ![app](https://user-images.githubusercontent.com/112633247/218098466-44cceb57-acda-4321-8555-db2345d285fc.png)
 

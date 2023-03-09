@@ -5,14 +5,24 @@
 
 #main-container{
     height: 30px ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     margin-top: 0px;
 }
 #infocontainer{
     height: 300px ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 90px;
+}
+#infocontainer>p{
+    margin-top: 10px;
+    font-size: x-large;
+
+}
+#infocontainer>h4,h5{
+margin-top: 10px;
+margin-bottom: 20px;
+font-size: x-large;
 }
