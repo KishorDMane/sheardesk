@@ -26,7 +26,6 @@ To use this app .
 
 
 
-
 <h1 align ="center">Sheared Screen</h1>
 
 ![sheared screen](https://user-images.githubusercontent.com/112633247/218098598-7e8e8a08-1138-4cdf-b91b-a7e7cde2b7af.png)
