@@ -4,11 +4,11 @@
 
 This is a project where user can shear their screen.
 To use this app .
-1) Go to the website and downloade and install app .
-2) start the app .
-3) To see sheared screen got to the website and go to sheared screen .
-4) hear youser need to enter the string present on app .
-5) we have succesfully sheared screen.
+1) Go to the website and download and install the app.
+2) start the app.
+3) To see sheared screen go to the website and go to sheared screen.
+4) hear you need to enter the string present on the app .
+5) we have successfully sheared the screen. 
 
 
 
